@@ -14,7 +14,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/theme/fasterize.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -29,63 +29,36 @@
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 		<style type="text/css">
-			#reveal .icon-bar {
+			.reveal .icon-bar {
 			    margin-left: 0.5em;
 			    margin-top: 0.3em;
 			}
 
-			#reveal .icon-bar {
+			.reveal .icon-bar {
 			    font-size: 0.4em;
 			}
 
-			#reveal .icon-bar img {
+			.reveal .icon-bar img {
 			    vertical-align: middle;
 			}
 
-			#reveal .icon-bar a {
+			.reveal .icon-bar a {
 			    text-decoration: none;
-			    color: rgba(74, 80, 86, 0.5);
+          color: #CCC;
 			    font-weight: 300;
 			}
 
-			#reveal .icon-bar a:hover {
-			    color: #4a5056;
+			.reveal .icon-bar a:hover {
+          color: #CCC;
 			    text-shadow: 0px -1px 2px rgba(255, 255, 255, 0.5);
 			    text-decoration: underline;
 			}
-			#reveal .icon-bar a span {
+			.reveal .icon-bar a span {
 			    padding-left: 0.25em;
 			    padding-right: 1em;
 			}
 
-			#reveal img:not(.plain) {
-			  margin: 30px 0 0 0;
-			  background: rgba(255,255,255,0.12);
-			  border: 4px solid #eee;
-
-			  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-			     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-			          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-
-			  -webkit-transition: all .11s linear;
-			     -moz-transition: all .11s linear;
-			       -o-transition: all .11s linear;
-			          transition: all .11s linear;
-			}
-
-			#reveal img.plain, #reveal img.plain:hover {
-			    border: none;
-			    box-shadow: none;
-			    background: none;
-			}
-
-			#reveal a.image:hover img:not(.plain), #reveal a.image:hover img.plain {
-			  background: none;
-			  box-shadow: none;
-			  -webkit-box-shadow: none;
-			}
-
-			#reveal pre code {
+			.reveal pre code {
 				word-wrap:inherit;
 			}
       ul#domainName>li {
@@ -105,12 +78,16 @@
           margin: 0 2px;
           padding: 0px 5px;
           border: 1px solid #ddd;
-          background-color: #AAA6A6;
           border-radius: 3px;
       }
-      #reveal ul li {
+      .reveal ul li {
         padding: 10px 0 10px 0;
       }
+      
+      .reveal h2 {
+        margin-bottom: 1em;
+      }
+
       body {
         background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #9CA0A2 100%)
       }
@@ -125,12 +102,12 @@
 			<div class="slides">
 				<section data-state="begin" class="present" >
           <br><br><br><br>
-					<h1>Formation <br/>client</h1>
+					<h2>Formation <br/>client</h2>
 				</section>
 				<section>
 					<section>
             <br><br><br><br>
-						<h1>Présentation Générale</h1>
+						<h2>Présentation Générale</h2>
 					</section>
 					<section>
 						<h3>Fonctionnement général</h3>
@@ -145,6 +122,11 @@
                 <ul>
                   <li>par défaut pointe sur la plateforme (mode démo)</li>
                   <li>si une config existe, pointe sur la plateforme ou sur l'origine</li>
+                </ul>
+              </li>
+              <li class="fragment" data-fragment-index="2">fasterized.net
+                <ul>
+                  <li>pointe toujours sur la plateforme</li>
                 </ul>
               </li>
 							<li class="fragment" data-fragment-index="3">fasterize.it
@@ -164,7 +146,7 @@
 				<section>
 					<section>
             <br><br><br><br>
-						<h1 style="font-size: 350%;">les règles d'optimisation</h1>
+						<h1 style="font-size: 350%;">les règles d'optimisation</h2>
 					</section>
 					<section data-transition="linear">
 						<h3>Moins de requêtes</h3>
@@ -211,50 +193,45 @@
 				<section>
 					<section>
             <br><br><br><br>
-						<h1>Tour de l’interface</h1>
+						<h2>Tour de l’interface</h2>
 					</section>
 					<section data-transition="none">
-          <h3>Page de bienvenue<a title="Link" class="dashboard" target="_blank" data-href="http://www.fasterize.com/fr/website_configs/id/welcome"> <i class="fa fa-external-link"></i></a></h3>
+          <h3>Dashboard<a title="Link" class="dashboard" target="_blank" data-href="http://www.fasterize.com/fr/accounts/aid/dashboard"> <i class="fa fa-external-link"></i></a></h3>
           <br><br>
               <ul >
-                <li>Test du site avec le mode preview</li>
-                <li>Instructions de branchement</li>
-                <li>Résultat des tests (+liens)</li>
-                <li>Visible tant que le site n'est pas branché</li>
+                <li>Liste des configurations du compte</li>
+                <li>État du branchement des configurations</li>
+                <li>État des optimisations des configurations</li>
+                <li>Instructions de branchement des configurations</li>
+                <li>Flush du cache des configurations</li>
+                <li>Arrêt des optimisations des configurations</li>
               </ul>
 					</section>
 					<section data-transition="none">
-          <h3>Page de bienvenue<a title="Link" class="dashboard" target="_blank" data-href="http://www.fasterize.com/fr/website_configs/id/welcome"> <i class="fa fa-external-link"></i></a></h3>
-            <img src="assets/welcome.png" >
+          <h3>Dashboard du compte<a title="Link" class="dashboard" target="_blank" data-href="http://www.fasterize.com/fr/accounts/aid/dashboard"> <i class="fa fa-external-link"></i></a></h3>
+          <img src="assets/account_dashboard.png" >
 					</section>
-					<section data-transition="none">
-						<h3>Dashboard <a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/id/dashboard"> <i class="fa fa-external-link"></i></a></h3>
-            <br><br>
-						<ul>
-							<li>Arrêter les optimisations en cas de problème</li>
-							<li>Suivi de la consommation</li>
-							<li>Vider le cache de Fasterize</li>
-						</ul>
-					</section>
-          <section data-transition="none">
-            <h3>Dashboard <a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/id/dashboard"> <i class="fa fa-external-link"></i></a></h3>
-            <img src="assets/dashboard.png" />
-          </section>
           <section data-transition="none">
 						<h3>Configuration</h3>
-            <br><br>
-            <p>Permet de configurer :</p>
-            <ul>
-							<li>Règles</li>
-							<li>Domaines</li>
-							<li>Cache</li>
-							<li>Exclusions</li>
-							<li>Redirections</li>
-						</ul>
+             <div style="text-align: left; ">
+                <p>Permet de configurer :</p>
+                <ul>
+                  <li>Règles</li>
+                  <li>Domaines</li>
+                  <li>Cache</li>
+                  <li>Exclusions</li>
+                  <li>Redirections</li>
+                </ul>
+                <p></p>
+                <p>En mode avancé</p>
+                <ul>
+                  <li>Tracking de performance Fasterize &amp; widgets</li>
+                  <li>A/B Test</li>
+                </ul>
+            </div>
 					</section>
 					<section data-transition="none">
 						<h3>Configuration : règles <a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/id/rules"> <i class="fa fa-external-link"></i></a></h3>
-            <br><br><br>
 						<ul>
 							<li>Activation/désactivation des règles</li>
               <li>Options possibles : icône <i class="fa fa-wrench"></i></li>
@@ -270,8 +247,7 @@
             <br><br><br>
 						<ul>
 							<li>Configuration de l'origine</li>
-							<li>Ajout de domaine secondaire (objets statiques)</li>
-              <li>Ajout des alias pour le site web</li>
+							<li>Ajout de domaines secondaires (objets statiques)</li>
 						</ul>
 					</section>
           <section data-transition="none">
@@ -286,45 +262,49 @@
 					<section data-transition="none">
 						<h3>Configuration : exclusions <a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/id/exclusions"> <i class="fa fa-external-link"></i></a></h3>
             <ul>
-
-            <li>Permet de ne pas optimiser une ou plusieurs URL.</li>
-            <li>Exemples :</li>
-            <ul>
-              <li>backoffice</li>
-              <li>tracking</li>
+              <li>Permet de ne pas optimiser une ou plusieurs URL.</li>
+              <li>Exemples : backoffice, tracking, ajax</li>
+              <li>Permet de configurer des URL à ne pas modifier dans une page HTML.</li>
             </ul>
-						<img src="assets/exclusions.png" />
+						<img src="assets/exclusion.png" />
 					</section>
+          <section data-transition="linear">
+            <h3>Configuration : Redirections <a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/id/redirections"> <i class="fa fa-external-link"></i></a></h3>
+            <ul>
+            <li>Redirections des mobiles et/ou tablettes vers un autre site.</li>
+            <img src="assets/redirection.png" />
+          </section>
+        </section>
 				</section>
         <section>
           <section>
             <br><br>
-            <h1>Comment identifier et corriger un problème ?</h1>
+            <h2>Comment identifier et corriger un problème ?</h2>
           </section>
           <section data-transition="none">
-            <h3>Une page ou une partie du site (ex: admin) est cassée</h3>
+            <h3>Une page est cassée</h3>
             <br><br><br>
             <ul>
               <li>Tester le site d'origine sans Fasterize</li>
-              <li>Voir la procédure détaillée sur le site de support <a title="Link" class="dashboard"  target="_blank" data-href="http://support.fasterize.com/knowledgebase/articles/173792-inspect-origin-website"> <i class="fa fa-external-link"></i></a></li>
+              <li>Voir la procédure détaillée sur le site de support <a title="Link" class="dashboard"  target="_blank" data-href="http://support.fasterize.com/fr/article/comment-verifier-le-fonctionnement-de-mon-site-web-dorigine-sans-passer-par-fasterize/"> <i class="fa fa-external-link"></i></a></li>
             </ul>
           </section>
 					<section data-transition="none">
-            <h3>Une page ou une partie du site (ex: admin) est cassée</h3>
+            <h3>Une page est cassée</h3>
             <br>
             <p>Utiliser les paramètres de debug dans l'URL :</p>
-            <br>
 						<ul class="code">
               <li><code>?frz-all=false</code> pour tout désactiver sur une page</li>
               <li><code>?frz-[rule]=false</code> pour désactiver une règle sur une page</li>
               <li><code>?frz-[rule]-[option]=false</code> pour désactiver une option d'une règle sur une page</li>
               <li><code>?frz-persist-[rule]=false</code> pour désactiver une règle sur une page et sur la session</li>
+              <li>Liste des règles <a href="http://support.fasterize.com/fr/article/resume-informations-techniques/#rules">ici <i class="fa fa-external-link"></i></a></li>
 						</ul>
 					</section>
 					<section data-transition="none">
-            <h3>Une page ou une partie du site (ex: admin) est cassée</h3>
+            <h3>Une page est cassée</h3>
             <ul>
-              <li><a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/id/rules">Activer / Désactiver des règles</a>
+              <li><a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/id/rules">Activer / Désactiver des règles <i class="fa fa-external-link"></i></a>
                 <p>Les règles qui posent problème sont en général</p>
                 <ol style="margin-left:80px">
                   <li>DeferJS</li>
@@ -405,8 +385,11 @@
 			</div>
 			<div class="icon-bar">
 				<p>
-					<img src="assets/logo_s.png" class="plain"/>
-					<a class="image" href="https://twitter.com/fasterize"><img class="plain" src="assets/tweet-me.svg" height="35"><span>twitter</span></a><a class="image" href="mailto:info@fasterize.com"><img class="plain" src="assets/email-me.svg" height="35"><span>email</span></a><a class="image" href="http://blog.fasterize.com/"><img class="plain" src="assets/blog-me.svg" height="35"><span>blog</span></a></p>
+          <a class="image" href="http://www.fasterize.com" style="font-size:28px; font-family: AvenirNext-Medium,Arial,sans-serif; color: #FFF;"><img src="assets/fasterize_logo_mini_blanc.svg" class="plain"/><span class="logo_title">fasterize</span></a>
+          <a class="image" href="https://twitter.com/fasterize"><img class="plain" src="assets/tweet-me.svg" height="35"><span>twitter</span></a>
+          <a class="image" href="mailto:info@fasterize.com"><img class="plain" src="assets/email-me.svg" height="35"><span>email</span></a>
+          <a class="image" href="http://blog.fasterize.com/"><img class="plain" src="assets/blog-me.svg" height="35"><span>blog</span></a>
+        </p>
 			</div>
 
 		</div>
@@ -445,9 +428,9 @@
       Reveal.configure({ slideNumber: true });
       //change id for current partner in every links
       var links = Array.prototype.slice.call(document.getElementsByClassName('dashboard')),
-          id = Reveal.getQueryHash().id;
+          id = Reveal.getQueryHash().id, aid = Reveal.getQueryHash().aid;
       links.forEach(function(link){
-        link.href = link.attributes['data-href'].value.replace('id',id);
+        link.href = link.attributes['data-href'].value.replace('aid',aid).replace('id', id);
       });
 		</script>
 
