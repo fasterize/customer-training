@@ -5,6 +5,16 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@font-face {
+  font-family: 'AvenirNext-Medium';
+  src: font-url('assets/2BACD2_1_0.eot');
+  src: font-url('assets/2BACD2_1_0.eot?#iefix') format('embedded-opentype'),
+      font-url('assets/2BACD2_1_0.woff') format('woff'),
+      font-url('assets/2BACD2_1_0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .reveal a:not(.image) {
   line-height: 1.3em; }
 
@@ -44,7 +54,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: white;
-  font-family: "Quicksand", sans-serif;
+  font-family: "AvenirNext-Medium", sans-serif;
   line-height: 0.9em;
   letter-spacing: -0.08em;
   text-transform: uppercase;
@@ -154,12 +164,4 @@ body {
 
 }
 
-@font-face {
-  font-family: 'AvenirNext-Medium';
-  src: font-url('assets/2BACD2_1_0.eot');
-  src: font-url('assets/2BACD2_1_0.eot?#iefix') format('embedded-opentype'),
-      font-url('assets/2BACD2_1_0.woff') format('woff'),
-      font-url('assets/2BACD2_1_0.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
